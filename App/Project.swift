@@ -21,7 +21,9 @@ let project = Project(
       sources: ["Sources/**"],
       resources: ["Resources/**"],
       dependencies: [
+        .composableArchitecture,
         .home,
+        .googleServiceLive,
       ]
     ),
     .target(

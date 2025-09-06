@@ -11,9 +11,13 @@ public extension TargetDependency {
   // external
   static let composableArchitecture: TargetDependency = .external(name: "ComposableArchitecture")
   static let alamofire: TargetDependency = .external(name: "Alamofire")
+  static let googleSignIn: TargetDependency = .external(name: "GoogleSignIn")
   
   // project
   static let home: TargetDependency = .project(target: "Home", path: .relativeToRoot("Home"))
+  static let designSystem: TargetDependency = .project(target: "DesignSystem", path: .relativeToRoot("DesignSystem"))
+  static let googleService: TargetDependency = .project(target: "GoogleService", path: .relativeToRoot("GoogleService"))
+  static let googleServiceLive: TargetDependency = .project(target: "GoogleServiceLive", path: .relativeToRoot("GoogleServiceLive"))
 }
 
 public extension Project {

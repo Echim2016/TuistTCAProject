@@ -2,30 +2,28 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project(
-  name: "Home",
+  name: "GoogleService",
   targets: [
     .target(
-      name: "Home",
+      name: "GoogleService",
       destinations: [.iPhone],
       product: .framework,
-      bundleId: "\(Project.bundleId).Home",
+      bundleId: "\(Project.bundleId).GoogleService",
       deploymentTargets: .iOS(Project.minimumDeploymentVersion),
       sources: ["Sources/**"],
       resources: nil,
       dependencies: [
         .composableArchitecture,
-        .designSystem,
-        .googleService,
       ]
     ),
     .target(
-      name: "HomeTests",
+      name: "GoogleServiceTests",
       destinations: [.iPhone],
       product: .unitTests,
-      bundleId: "\(Project.bundleId).HomeTests",
+      bundleId: "\(Project.bundleId).GoogleServiceTests",
       deploymentTargets: .iOS("17.0"),
       sources: ["Tests/**"],
-      dependencies: [.target(name: "Home")]
+      dependencies: [.target(name: "GoogleService")]
     ),
   ]
 )

@@ -23,5 +23,9 @@ let package = Package(
       url: "https://github.com/Alamofire/Alamofire",
       .upToNextMajor(from: "5.10.2")
     ),
+    .package(
+      url: "https://github.com/google/GoogleSignIn-iOS",
+      .upToNextMajor(from: "8.0.0")
+    ),
   ]
 )
