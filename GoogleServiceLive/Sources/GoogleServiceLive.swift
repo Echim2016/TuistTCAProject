@@ -29,11 +29,14 @@ extension GoogleService: Dependencies.DependencyKey {
     else {
       throw GoogleSignInError.rootViewControllerNotFound
     }
-    let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController)
-    guard let idToken = result.user.idToken else {
-      throw GoogleSignInError.userIdTokenNotFound
-    }
-    return idToken.tokenString
+
+//    let result = try await GIDSignIn.sharedInstance.signIn(withPresenting: rootViewController)
+//    guard let idToken = result.user.idToken else {
+//      throw GoogleSignInError.userIdTokenNotFound
+//    }
+//    return idToken.tokenString
+
+    return "live_token"
   } signOut: {
     GIDSignIn.sharedInstance.signOut()
   }
